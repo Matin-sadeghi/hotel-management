@@ -14,7 +14,7 @@ func MainMenu()  {
 		fmt.Println("Choose an option :")
 
 		var option int
-		fmt.Scanln(option)
+		fmt.Scanln(&option)
 
 
 
