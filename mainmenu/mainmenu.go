@@ -16,6 +16,16 @@ func MainMenu()  {
 		var option int
 		fmt.Scanln(&option)
 
+		switch option {
+		case 1:
+			var guestName string
+			fmt.Println("Enter guest name:")
+			fmt.Scanln(&guestName)
+			fmt.Println("**** Guest created ****")
+
+			
+		}
+
 
 
 
