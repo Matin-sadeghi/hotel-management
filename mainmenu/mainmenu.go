@@ -1,6 +1,10 @@
 package mainmenu
 
-import "fmt"
+import ("fmt"
+"hotel-management/guest"
+"hotel-management/room"
+
+)
 
 func MainMenu()  {
 	for {
@@ -21,6 +25,7 @@ func MainMenu()  {
 			var guestName string
 			fmt.Println("Enter guest name:")
 			fmt.Scanln(&guestName)
+			guest.RegisterationGuest(guestName)
 			fmt.Println("**** Guest created ****")
 
 		case 2:
@@ -28,9 +33,16 @@ func MainMenu()  {
 			var roomNumber int
 
 			fmt.Println("Enter guest id:")
-			fmt.Scanln(&guestID)
+			fmt.Scanln(&guestID) 
+			findedGuest := guest.FindGuestById(guestID)
+			if( findedGuest == nil) {
+			fmt.Println("Guest Not Found")
+			return
+			}
 			fmt.Println("Enter room number:")
 			fmt.Scanln(&roomNumber)
+
+			room.ReserveRoom(roomNumber,findedGuest)
 
 
 

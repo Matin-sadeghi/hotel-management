@@ -19,14 +19,14 @@ func InitRooms(count int) {
 }
 
 func ReserveRoom(number int, guest *guest.Guest){
-	for _, i := range rooms {
+	for _, room := range rooms {
 
-		if rooms[i].Number == number{
-			if rooms[i].Occupied {
+		if room.Number == number{
+			if room.Occupied {
 				fmt.Println("This room is already reserved")
 			}else{
-				rooms[i].Occupied = true
-				rooms[i].Guest = guest
+				room.Occupied = true
+				room.Guest = guest
 				fmt.Printf("Room %d is reserved for %s . \n",number,guest.Name)
 			}
 			return
