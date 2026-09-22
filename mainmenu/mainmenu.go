@@ -42,11 +42,15 @@ func MainMenu()  {
 			fmt.Println("Enter room number:")
 			fmt.Scanln(&roomNumber)
 
-			room.ReserveRoom(roomNumber,findedGuest)
-
-
-
+			room.ReserveRoom(roomNumber,findedGuest)	
 			
+		case 3:
+			var roomNumber int
+			fmt.Println("Enter room number:")
+			fmt.Scanln(&roomNumber)
+			room.CheckoutRoom(roomNumber)	
+			
+
 		}
 
 

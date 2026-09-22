@@ -1,5 +1,4 @@
 package guest
-import "fmt"
 
 type Guest struct {
 	ID int
