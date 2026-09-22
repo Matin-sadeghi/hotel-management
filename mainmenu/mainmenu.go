@@ -23,6 +23,17 @@ func MainMenu()  {
 			fmt.Scanln(&guestName)
 			fmt.Println("**** Guest created ****")
 
+		case 2:
+			var guestID int
+			var roomNumber int
+
+			fmt.Println("Enter guest id:")
+			fmt.Scanln(&guestID)
+			fmt.Println("Enter room number:")
+			fmt.Scanln(&roomNumber)
+
+
+
 			
 		}
 
