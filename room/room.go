@@ -7,3 +7,11 @@ type Room struct {
 	Occupied bool
 	Guest *guest.Guest
 }
+
+var rooms []Room
+
+func InitRooms(count int) {
+	for i := 0; i < count; i++ {
+		rooms = append(rooms,Room{Number:i+1,Occupied:false,Guest:nil})
+	}
+}
